@@ -4,6 +4,12 @@ public abstract class ACar implements Car {
     private String model;
     private int numberOfDoors;
 
+    public ACar(String registrationNumber, String make, String model, int numberOfDoors) {
+        this.registrationNumber = registrationNumber;
+        this.make = make;
+        this.model = model;
+        this.numberOfDoors = numberOfDoors;
+    }
     @Override
     public String getRegistrationNumber() {
         return registrationNumber;
@@ -19,10 +25,14 @@ public abstract class ACar implements Car {
         return model;
     }
     public int getNumberOfDoors(){
-        return 0; //todo: remember to change
+        return this.numberOfDoors;
     }
     @Override
     public String toString(){
-        return ""; //todo: remember to change
+        String carReg = "Reg. number: " + getRegistrationNumber() + "\n";
+        String carBrand = "Brand: " + getMake() + "\n";
+        String carModel = "Model: " + getModel() + "\n";
+        String carDoors = "Number of doors: " + getNumberOfDoors() + "\n";
+        return carReg + carBrand + carModel + carDoors;
     }
 }
