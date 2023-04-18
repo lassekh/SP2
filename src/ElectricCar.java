@@ -36,6 +36,7 @@ public class ElectricCar extends ACar{
     }
     @Override
     public String toString(){
-        return ""; //todo: remember to change
+        String carFee = "Reg. fee: " + getRegistrationFee();
+        return super.toString() + carFee; //todo: remember to change
     }
 }

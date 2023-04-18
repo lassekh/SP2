@@ -23,8 +23,15 @@ public class GasolinCar extends AFuelCar {
         }
         return fee;
     }
+
+    @Override
+    public String getFuelType() {
+        return "Gasolin";
+    }
+
     @Override
     public String toString(){
-        return ""; //todo: remember to change
+        String carFee = "Reg. fee: " + getRegistrationFee();
+        return super.toString() + carFee;
     }
 }

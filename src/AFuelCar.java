@@ -5,14 +5,14 @@ public abstract class AFuelCar extends ACar {
         this.kmPrLitre = kmPrLitre;
     }
 
-    public String getFuelType(){
-        return ""; //todo: remember to change
-    }
+    public abstract String getFuelType();
     public int getKmPrLitre(){
         return this.kmPrLitre;
     }
     @Override
     public String toString(){
-        return ""; //todo: remember to change
+        String carFuel = "Fueltype: " + getFuelType() + "\n";
+        String carKml = getKmPrLitre() + "\n";
+        return  carFuel + carKml + super.toString();
     }
 }
