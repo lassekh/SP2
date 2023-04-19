@@ -7,5 +7,7 @@ public class Main {
         LassesCarRental.addCar(electricCar);
         LassesCarRental.addCar(gasolinCar);
         LassesCarRental.addCar(dieselCar);
+        int totalRegFee = LassesCarRental.getTotalRegistrationFeeForFleet();
+        System.out.println(totalRegFee);
     }
 }

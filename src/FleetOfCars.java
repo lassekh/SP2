@@ -14,8 +14,12 @@ public class FleetOfCars {
     }
 
     public int getTotalRegistrationFeeForFleet() {
-        int total =0;
-        return total;
+        int totalFee = 0;
+        for(int i = 0; i < fleet.size(); i++){
+            int regFee = fleet.get(i).getRegistrationFee();
+            totalFee += regFee;
+        }
+        return totalFee;
     }
     @Override
     public String toString(){
