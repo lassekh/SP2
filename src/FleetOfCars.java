@@ -23,10 +23,12 @@ public class FleetOfCars {
     }
     @Override
     public String toString(){
-        String car;
-        for(int i = 0; i < fleet.size(); i++){
-            //car = fleet.get(i.);
+        int counter = 0;
+        for(Car c : getFleet()){
+            counter++;
+            System.out.println("Car number " + counter + "\n---------------------");
+            System.out.println(c + "\n---------------------");
         }
-        return "";
+        return "The total registration fee for Lasses Car Rental is: " + getTotalRegistrationFeeForFleet();
     }
 }

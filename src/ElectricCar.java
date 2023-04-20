@@ -14,14 +14,15 @@ public class ElectricCar extends ACar{
         return this.maxRange;
     }
     public int getWhPrKm(){
-        int whPrKm = getBatteryCapacityKWh()/getMaxRangeKm();
+        //Multiply getBatteryCapacityKWh() with 1000 to get Wh - watt-timer
+        int whPrKm = (getBatteryCapacityKWh()*1000)/getMaxRangeKm();
         return whPrKm;
     }
     public int getRegistrationFee(){
-        double kwhToKml = (int)getWhPrKm()/91.25/100;
+        double kwhToKml = 100/(getWhPrKm()/91.25);
         int kml = (int)kwhToKml;
         int fee = 0;
-        if(kml <= 50 && kml >= 20){
+        if(/*kml <= 50 && */kml >= 20){
             fee = 330;
         } else if(kml < 20 && kml >= 15){
             fee = 1050;
@@ -37,6 +38,6 @@ public class ElectricCar extends ACar{
     @Override
     public String toString(){
         String carFee = "Reg. fee: " + getRegistrationFee();
-        return super.toString() + carFee; //todo: remember to change
+        return "Fueltype: Electricity \n" + super.toString() + carFee;
     }
 }

@@ -12,7 +12,7 @@ public abstract class AFuelCar extends ACar {
     @Override
     public String toString(){
         String carFuel = "Fueltype: " + getFuelType() + "\n";
-        String carKml = getKmPrLitre() + "\n";
+        String carKml = "Km/L: " + getKmPrLitre() + "\n";
         return  carFuel + carKml + super.toString();
     }
 }
